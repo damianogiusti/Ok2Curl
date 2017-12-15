@@ -121,7 +121,7 @@ public class CurlBuilder {
             parts.add(String.format(FORMAT_BODY, body));
         }
 
-        parts.add(url);
+        parts.add(String.format("\"%s\"", url));
 
         return join(" ", parts);
     }
